@@ -1,0 +1,22 @@
+
+.header-css{
+  background-color:#2980b9;
+  width: 100%;
+}
+.header-css .navbar-brand {
+  color:white;
+}
+.header-css .nav-link {
+  color:white !important;
+}
+.header-css .nav-link:hover {
+  color:yellow !important;
+}
+
+/*
+@media screen and (max-width: 992px) {
+  .navbar-collapse {
+  display: none
+  }
+}
+*/
