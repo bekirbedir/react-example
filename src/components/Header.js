@@ -12,7 +12,7 @@ class Header extends React.Component{
     buttonClicked(){
         console.log("button clicked worked.")
         this.setState({
-           isNavOpen : !this.state.isNavOpen
+           isNavOpen :  !this.state.isNavOpen
         })
     }
 
