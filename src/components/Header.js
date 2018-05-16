@@ -20,7 +20,7 @@ class Header extends React.Component{
         console.log("RENDER RE-WORK");
      return(
     <div className = "header-css">
-    <nav className = "container navbar navbar-expand-lg navbar-light justify-content-between">
+    <nav className = "container navbar navbar-expand-lg justify-content-between">
    <a className="navbar-brand" href= "#"> Eğitim Budur</a>
    <button className="navbar-toggler" type="button"  onClick = {this.buttonClicked.bind(this)} >
     <span className="navbar-toggler-icon"></span>
