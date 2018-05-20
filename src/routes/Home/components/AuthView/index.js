@@ -14,7 +14,7 @@ class AuthView extends Component{
 
 
         this.state = {
-            currentView  : 1    
+            currentView  : 1
         }
     }
 

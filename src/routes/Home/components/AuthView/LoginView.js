@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { userInit } from 'store/userReducer';
+import { post } from '../../../../utils/http.helper'
 
 
 
@@ -16,21 +17,25 @@ class LoginView extends React.Component{
     }
 
     onUserClick(){
-        //TODO HTTP call
-        console.log(this.state)
         const user = {
-            name: "Melih Korkmaz",
-            email: "melih@gmail.com",
-            age: 24,
-            gender: "male"
+            email: this.state.email,
+            password : this.state.password
+           
         }
-        /*
-        const user = {
-            name: this.state.email,
-            password: this.state.password
-        }
-        */
-        this.props.loginUserData(user);
+        post('auth/login' , user).then( x => {
+            if(x.status){
+                console.log(x) 
+                localStorage.setItem('userToken' , x.token);
+                this.props.loginUserData({email : user.email});
+                //dashboard redirect
+            }
+            else {
+                alert(x.message)
+            }
+        
+        })
+
+        //this.props.loginUserData(user);
     }
 
     emailChanged(e){
